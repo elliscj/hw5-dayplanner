@@ -1,22 +1,23 @@
-// var day = moment();
 var today = $("#currentDay");
 var currentHour = moment().hour();
-var colorChange = document.querySelectorAll("tbody.tr.th");
+var colorChange = document.querySelectorAll(".color-change");
 // console.log(currentHour);
-// today.text(moment().format("LLLL"));
 
-colorChange.forEach((timeblock) => {
-  const textarea = document.querySelector("<th>");
-  const hour = parseInt(timeblock.getAttribute("data-hour"));
-  if (currentHour > hour) {
-    textarea.classList.add("past");
-  } else if (currentHour === hour) {
-    textarea.classList.add("present");
-  } else if (currentHour < hour) {
-    textarea.classList.add("future");
-  }
-  console.log(textarea);
+console.log(colorChange);
+
+colorChange.forEach((colorChange) => {
+  const hour = parseInt(colorChange.getAttribute("data-hour"));
   console.log(hour);
+  if (currentHour > hour) {
+    colorChange.classList.add("past");
+  } else if (currentHour === hour) {
+    colorChange.classList.add("present");
+  } else if (currentHour < hour) {
+    colorChange.classList.add("future");
+  }
+  console.log(hour);
+
+  setInterval(function () {}, 60000);
 });
 
 // hour =
