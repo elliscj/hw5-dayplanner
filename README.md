@@ -10,6 +10,8 @@ These days peoples schedules fill up quick and it can get easy to forget what yo
 
 ## Deployed Link
 
+https://elliscj.github.io/hw5-dayplanner/
+
 ## License
 
 MIT License
