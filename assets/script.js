@@ -1,13 +1,11 @@
 var today = $("#currentDay");
 var currentHour = moment().hour();
 var colorChange = document.querySelectorAll(".color-change");
-// console.log(currentHour);
 
 console.log(colorChange);
 
 colorChange.forEach((colorChange) => {
   const hour = parseInt(colorChange.getAttribute("data-hour"));
-  console.log(hour);
   if (currentHour > hour) {
     colorChange.classList.add("past");
   } else if (currentHour === hour) {
@@ -15,20 +13,7 @@ colorChange.forEach((colorChange) => {
   } else if (currentHour < hour) {
     colorChange.classList.add("future");
   }
-  console.log(hour);
-
-  setInterval(function () {}, 60000);
 });
-
-// hour =
-
-// if (currentHour > hour) {
-//   textarea.classList.add("past");
-// } else if (currentHour === hour) {
-//   textarea.classList.add("present");
-// } else if (currentHour < hour) {
-//   textarea.classList.add("future");
-// }
 
 function updateTime() {
   var dateTime = moment().format("llll");
